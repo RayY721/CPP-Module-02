@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:34:51 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/12 15:22:01 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/12 20:54:21 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class Point
 {
 
     private:
-        Fixed const	x;
-        Fixed const	y;
+        Fixed const	_x;
+        Fixed const	_y;
 
     public:
 		Point( void );
@@ -28,7 +28,10 @@ class Point
 		Point( const Point& other );
 		Point& operator=( const Point& other );
 		~Point( void );
-};
 
+		const Fixed& getX( void ) const;
+		const Fixed& getY( void ) const;
+		// equivalent to Fixed const& getX( void ) const;
+};
 
 #endif
