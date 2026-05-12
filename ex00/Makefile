@@ -6,11 +6,11 @@
 #    By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/09 12:26:41 by kuyu              #+#    #+#              #
-#    Updated: 2026/05/09 20:45:57 by kuyu             ###   ########.fr        #
+#    Updated: 2026/05/12 13:30:38 by kuyu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = ex00
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
