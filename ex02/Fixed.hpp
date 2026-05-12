@@ -6,7 +6,7 @@
 /*   By: kuyu <kuyu@student.codam.nl>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:54:21 by kuyu              #+#    #+#             */
-/*   Updated: 2026/05/10 21:54:56 by kuyu             ###   ########.fr       */
+/*   Updated: 2026/05/12 13:00:25 by kuyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,17 @@ class Fixed
 		Fixed operator*( const Fixed& other ) const;
 		Fixed operator/( const Fixed& other ) const;
 
-		// four increment/decrement operators
-
 		// four static member functions
 		static Fixed& min(Fixed& a, Fixed& b);
-		static Fixed& min(const Fixed& a, const Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
 		static Fixed& max(Fixed& a, Fixed& b);
-		static Fixed& max(const Fixed& a, const Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
+		
+		// four increment/decrement operators
+		Fixed& operator++( void );		// pre-increment
+		Fixed operator++( int );		// post-increment
+		Fixed& operator--( void );		// pre-decrement
+		Fixed operator--( int );		// post-decrement
 	};
 
 // The return type must be std::ostream& to allow chaining of the operator<< calls
